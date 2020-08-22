@@ -7,4 +7,29 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div>
+        <h2>Enviroment Variables</h2>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr>
+                        <td>OS Name</td>
+                        <td>@Environment.GetEnvironmentVariable("OS")</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Name</td>
+                        <td>@Environment.GetEnvironmentVariable("COMPUTERNAME")</td>
+                    </tr>
+                    <tr>
+                        <td>Number processors</td>
+                        <td>@Environment.GetEnvironmentVariable("NUMBER_OF_PROCESSORS")</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
 </div>
