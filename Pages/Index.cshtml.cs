@@ -15,7 +15,6 @@ namespace HelloGitHubActions.Pages
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            _logger.LogInformation($"{this.GetType().Name}: Constructor called");
         }
 
         public void OnGet()
