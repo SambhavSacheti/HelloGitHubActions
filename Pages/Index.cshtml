@@ -16,8 +16,15 @@
                         <th>Value</th>
                     </tr>
                 </thead>
-                <tbody>    
+                <tbody> 
+                    @foreach (System.Collections.DictionaryEntry de in Environment.GetEnvironmentVariables())
+                    {
                     <tr>
+                        <td>@de.Key</td>
+                         <td>@de.Value</td>
+                    </tr>
+                    }
+                    @* <tr>
                         <td>OS Name</td>
                         <td>@Environment.GetEnvironmentVariable("OS")</td>
                     </tr>
@@ -28,7 +35,7 @@
                     <tr>
                         <td>Number processors</td>
                         <td>@Environment.GetEnvironmentVariable("NUMBER_OF_PROCESSORS")</td>
-                    </tr>
+                    </tr> *@
                 </tbody>
             </table>
     </div>
