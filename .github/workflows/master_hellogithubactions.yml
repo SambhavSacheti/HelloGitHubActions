@@ -8,6 +8,9 @@ on:
     branches:
       - master
 
+env:
+  NETCORE_VERSION:  '5.0.0-preview-7-20365-19'
+   
 jobs:
   build-and-deploy:
     runs-on: windows-latest
@@ -15,12 +18,12 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: Set up .NET Core
+    - name: Set up .NET Core - ${{ env.NETCORE_VERSION }}
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.102'
+        dotnet-version: ${{ dotnet-version }}
 
-    - name: Build with dotnet
+    - name: Build with dotnet - ${{ env.NETCORE_VERSION  }}
       run: dotnet build --configuration Release
 
     - name: dotnet publish
