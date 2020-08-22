@@ -1,6 +1,6 @@
 name: "Build and Deploy"
 
-on: [push]
+on: [push,workflow_dispatch]
 
 env:
   AZURE_WEBAPP_NAME: aspnet-core-GithubActions-Deploy  # set this to ypur application's name
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup .NET Core SDK ${{ env.NETCORE_VERSION }}
-        uses: actions/setups-dotnet@v1
+        uses: actions/setup-dotnet@v1
         with:
             dotnet-version: ${{ env.NETCORE_VERSION }}
         
