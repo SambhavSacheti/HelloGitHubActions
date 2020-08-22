@@ -20,8 +20,8 @@
                     @foreach (System.Collections.DictionaryEntry de in Environment.GetEnvironmentVariables())
                     {
                     <tr>
-                        <td>@de.Key</td>
-                         <td>@de.Value</td>
+                        <td class="text-left"> @de.Key</td>
+                         <td class="text-left">@de.Value</td>
                     </tr>
                     }
                     @* <tr>
